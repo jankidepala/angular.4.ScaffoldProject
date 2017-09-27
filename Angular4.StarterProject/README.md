@@ -1,10 +1,17 @@
-# Angular4.StarterProject
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
+# Angular4.StarterProject for basic routing
 
 ## Angular 4.0 basic router
-The mapping of URLs to Components we want displayed on the page is done via something called a Route Configuration, at it’s core it’s just an array which we can define like so:
-![Picture](https://github.com/jankidepala/angular.4.ScaffoldProject/blob/master/Angular4.StarterProject/src/assets/images/logo.png)
+The mapping of URLs to Components we want displayed on the page is done via A route in our application is defined by a mapping of a URL to a component or a redirect to another URL.
+
+Array of Routes and then install them in our application by importing them into our NgModule using RouterModule.forRoot(routes).
+![Picture](https://github.com/jankidepala/angular.4.ScaffoldProject/blob/master/Gittts/01_Router_Angular_4.0.png)
+
+Directive called router-outlet needs to be added somewhere in template HTML. This directive tells Angular where it should insert each of those components in the route in app.component
+
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+
 
 
 ## Development server
@@ -18,15 +25,3 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

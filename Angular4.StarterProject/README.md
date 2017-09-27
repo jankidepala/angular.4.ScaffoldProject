@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
 
+## Angular 4.0 basic router
+The mapping of URLs to Components we want displayed on the page is done via something called a Route Configuration, at it’s core it’s just an array which we can define like so:
+![Picture](https://github.com/jankidepala/angular.4.ScaffoldProject/blob/master/Angular4.StarterProject/src/assets/images/logo.png)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

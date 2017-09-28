@@ -14,6 +14,7 @@ const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'patient', component: PatientComponent},
+  {path: '**', component: LoginComponent}
 ];
 
 @NgModule({

@@ -13,11 +13,6 @@ export class ReactiveFormsComponent {
   name = '';
   titleAlert = 'This field is required';
 
-  f = new FormGroup({
-    firstName: new FormControl(),
-    lastName: new FormControl(),
-    email: new FormControl()
-  });
   constructor(private fb: FormBuilder) {
     this.rForm = fb.group({
       'name': [null, Validators.required],
@@ -26,8 +21,8 @@ export class ReactiveFormsComponent {
     });
   }
   addPost(post) {
-    this.description = post.description;
-    this.name = post.name;
+    this.description = 'DESCRIPTION:' + post.description;
+    this.name = 'POST NAME:' + post.name;
   }
   ngOnInit() {
     this.rForm.get('validate').valueChanges.subscribe(

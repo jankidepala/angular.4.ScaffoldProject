@@ -7,7 +7,7 @@ import { FormGroup, FormControl, FormArray, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  template: '<app-reactive-forms></app-reactive-forms>',
+  template: '<app-crud></app-crud>',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent{

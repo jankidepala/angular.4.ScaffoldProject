@@ -1,14 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
+
   <h1>
     Welcome to {{title}}!
   </h1>
-<form 
+<form [formGroup]="f"
   (ngSubmit) = "onSubmit(userForm.value)"
   #userForm ="ngForm">
-<input type="text" name="firstname" placeholder="First name" formControlName="name">
-<input type="text" name="lastName" placeholder="Last name" ngModel>
+<input type="text" name="firstname" placeholder="First name" formControlName="firstName" ngModel>
+<input type="text" name="lastName" placeholder="Last name" formControlName="lastName" ngModel>
 <br>
-  <input type="submit" value="submit">
 
+  <input type="submit" value="submit">  
 </form>
+<pre>{{userForm.value | json}}</pre>

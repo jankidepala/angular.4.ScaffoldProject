@@ -7,20 +7,16 @@ import { FormGroup, FormControl, FormArray, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: '<app-reactive-forms></app-reactive-forms>',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
   title = 'app';
   f = new FormGroup({
-    name: new FormControl(),
-    password: new FormControl(),
-    email: new FormControl(),
-    state: new FormControl(),
-    city: new FormControl(),
-    zip: new FormControl()
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    email: new FormControl()
   });
- 
   onSubmit = function(s){
     console.log(s);
   };

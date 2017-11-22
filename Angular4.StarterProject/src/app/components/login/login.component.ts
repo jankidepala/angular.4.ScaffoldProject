@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PatientDataService } from '../../services/patient-data.service';
 
 @Component({
   selector: 'app-login',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
-
+  items: Array<any>;
+  constructor(private S: PatientDataService) {
+    console.log(S);
+   }
   ngOnInit() {
+    this.items = this.S.getItems();
   }
 
 }

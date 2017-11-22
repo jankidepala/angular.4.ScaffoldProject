@@ -8,6 +8,9 @@ import { CurrencyFormaterDirective } from './directives/currency-formater.direct
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PatientComponent } from './components/patient/patient.component';
+import { WidgetOneComponent } from './widgets/widget-one/widget-one.component';
+import { PatientDataService } from './services/patient-data.service';
+import { AuthenticationService } from './services/authentication.service';
 
 const appRoutes: Routes = [
   {path: '', component: LoginComponent},
@@ -25,13 +28,14 @@ const appRoutes: Routes = [
     CurrencyFormaterDirective,
     HeaderComponent,
     FooterComponent,
-    PatientComponent
+    PatientComponent,
+    WidgetOneComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [AuthenticationService, PatientDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
